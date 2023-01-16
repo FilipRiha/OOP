@@ -25,7 +25,7 @@ console.log(mysMan.name);
 console.log(mysMan.age);
 */
 
-class women {
+/*class women {
   constructor(name, age, height, haircolor, eyecolor, widht) {
     this.name = name;
     this.age = age;
@@ -49,4 +49,37 @@ class women {
     console.log(this.name + "must be in motion a bit")
   }
 }
-const myWomwen = new women("Adela", 16, 175, "Blonde", "Blue", 0, 60);
+const myWomwen = new women("Adela", 16, 175, "Blonde", "Blue", 0, 60);*/
+
+const info = document.getElementById("info");
+const upgrade = document.getElementById("upgrade")
+
+class Player {
+  constructor(name, hp, mana, money) {
+    this.name = name;
+    this.hp = hp;
+    this.mana = mana;
+    this.money = money;
+    console.log(this);
+  }
+  printinfo(element) {
+    element.innerHTML = `
+      <p>Name: ${this.name} </p>
+      <p>HP:  ${this.hp} </p>
+      <p>Mana: ${this.mana} </p>
+      <p>Money: ${this.money} </p>
+      `;
+  }
+  upgradeStats(){
+    this.hp++;
+    this.money++;
+    this.mana++
+  }
+}
+const myplayer = new Player("Pepa",100,100,200);
+myplayer.printinfo(info);
+
+upgrade.onclick =()=>{
+  myplayer.upgradeStats();
+  myplayer.printinfo(info);
+}
