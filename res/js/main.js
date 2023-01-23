@@ -51,6 +51,8 @@ console.log(mysMan.age);
 }
 const myWomwen = new women("Adela", 16, 175, "Blonde", "Blue", 0, 60);*/
 
+
+/*
 const info = document.getElementById("info");
 const upgrade = document.getElementById("upgrade")
 
@@ -82,4 +84,48 @@ myplayer.printinfo(info);
 upgrade.onclick =()=>{
   myplayer.upgradeStats();
   myplayer.printinfo(info);
+}*/
+
+class Calculator{
+
+  plus(a, b) {
+    return a+b
+  }
+  minus(a, b) {
+    return a-b
+  }
+  krat(a, b) {
+    return a*b
+  }
+  deleno(a, b) {
+    return a/b
+  }
 }
+
+console.log(myCalc.deleno(5, 4));
+const myCalc= new Calculator();
+
+
+
+class StaticCalculator{
+
+  static plus(a, b) {
+    return a+b
+  }
+  static minus(a, b) {
+    return a-b
+  }
+  static krat(a, b) {
+    return a*b
+  }
+  static deleno(a, b) {
+    return a/b
+  }
+}
+ console.log(StaticCalculator.deleno(5, 4));
+
+
+
+  
+
+
