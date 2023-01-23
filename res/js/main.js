@@ -1,4 +1,8 @@
 /*
+
+
+
+            //Klasické OOP kde se vypíšou činnosti //
 class Man{
 
     constructor(name , age){
@@ -51,10 +55,17 @@ console.log(mysMan.age);
 }
 const myWomwen = new women("Adela", 16, 175, "Blonde", "Blue", 0, 60);*/
 
-
 /*
 const info = document.getElementById("info");
 const upgrade = document.getElementById("upgrade")
+
+
+
+
+
+
+
+              //Hráč který si když kliknu na tlačítko tak se mu zvětší hodnoty//
 
 class Player {
   constructor(name, hp, mana, money) {
@@ -86,46 +97,94 @@ upgrade.onclick =()=>{
   myplayer.printinfo(info);
 }*/
 
-class Calculator{
 
+
+
+
+
+
+
+              //Kalkulačka jedna statická druha bez static//
+/*
+class Calculator {
   plus(a, b) {
-    return a+b
+    return a + b;
   }
   minus(a, b) {
-    return a-b
+    return a - b;
   }
   krat(a, b) {
-    return a*b
+    return a * b;
   }
   deleno(a, b) {
-    return a/b
+    return a / b;
   }
 }
 
 console.log(myCalc.deleno(5, 4));
-const myCalc= new Calculator();
+console.log(myCalc.minus(6, 2));
+const myCalc = new Calculator();
+//
+//
 
-
-
-class StaticCalculator{
-
+class StaticCalculator {
   static plus(a, b) {
-    return a+b
+    return a + b;
   }
   static minus(a, b) {
-    return a-b
+    return a - b;
   }
   static krat(a, b) {
-    return a*b
+    return a * b;
   }
   static deleno(a, b) {
-    return a/b
+    return a / b;
   }
 }
- console.log(StaticCalculator.deleno(5, 4));
+console.log(StaticCalculator.deleno(5, 4));
+console.log(StaticCalculator.minus(5, 4));
+*/
 
 
 
-  
 
 
+                  //Dědičnost //
+
+class Animal
+{
+    constructor(name,age,color){
+      this.name=name
+      this.age=age
+      this.color=color
+      this.color=color
+    }
+
+    goSound(){
+      console.log(Haf)
+    }
+}
+
+class Dog extends Animal{
+  constructor(name,age,color){
+  super (name,age,color);
+}
+
+  goSound(){
+    console.log("HAF HAF")
+  }
+
+}
+
+class Cat extends Animal{
+  constructor(name,age,color){
+  super (name,age,color);}
+
+  goSound(){
+    console.log("MŇAU MŇAU")
+  }
+}
+const myDog= new Dog("Pepa" ,18,"modra" );
+const myCat= new Cat("Drakula" , 24,"hneda");
+myDog.goSound()
+myCat.goSound()
